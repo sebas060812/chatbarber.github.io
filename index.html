@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>encuesta de barbershopjs</title>
+    <link rel="stylesheet" href="chatbar.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Encuesta de Cortes de Pelo</h1>
+            <p>Descubre el corte de pelo ideal para ti según tus preferencias.</p>
+        </header>
+
+
+        <div class="question-group active" id="question1">
+            <h2>¿Qué tipo de pelo tienes?</h2>
+            <button onclick="nextQuestion('liso', 'question2')">Liso</button>
+            <button onclick="nextQuestion('ondulado', 'question2')">Ondulado</button>
+            <button onclick="nextQuestion('rizado', 'question2')">Rizado</button>
+            <button onclick="nextQuestion('otro', 'question2')">Otro</button>
+        </div>
+
+        <div class="question-group" id="question2">
+            <h2>¿Qué estilo prefieres?</h2>
+            <button onclick="nextQuestion('latino', 'question3')">Latino</button>
+            <button onclick="nextQuestion('americano', 'question3')">Americano</button>
+            <button onclick="nextQuestion('moderno', 'question3')">Moderno</button>
+        </div>
+
+        <div class="question-group" id="question3">
+            <h2>¿Prefieres un corte de fácil mantenimiento?</h2>
+            <button onclick="nextQuestion('facil', 'question4')">Sí</button>
+            <button onclick="nextQuestion('regular', 'question4')">No importa</button>
+        </div>
+
+        <div class="question-group" id="question4">
+            <h2>¿Qué largo de cabello te gusta?</h2>
+            <button onclick="showRecommendation('corto')">Corto</button>
+            <button onclick="showRecommendation('mediano')">Mediano</button>
+            <button onclick="showRecommendation('largo')">Largo</button>
+        </div>
+
+ 
+        <div class="recommendation" id="recommendation">
+            <h2>Recomendación de Corte</h2>
+            <p id="recommendationText"></p>
+            <button onclick="goToBarberia()">Ir a Barbería para Ver Detalles</button>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        &copy; 2024 Juan Sebastian & Jose Carabali - Barberíajs
+    </footer>
+
+    <script src="javachat.js"></script>
+</body>
+</html>
